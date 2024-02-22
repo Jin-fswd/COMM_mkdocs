@@ -19,7 +19,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
     docs/
         index.md  # The documentation homepage.
         ...       # Other markdown pages, images and other files.
-        
+
 ------------------------------------------------------------------------------------------
 
 # Basic Setup Guide for New FSWD Students Using Visual Studio Code
@@ -32,3 +32,6 @@ Welcome to all new FSWD (Full Stack Web Development) students! One of the most i
 
 - Visit the [Visual Studio Code official website](https://code.visualstudio.com/) and download the version that matches your operating system, then follow the installation instructions.
 - **Installation Verification**: Once installed, launch VSCode and ensure you see the 'Welcome Screen'.
+
+
+![smaple image](assets/images/sample_img.jpg)
