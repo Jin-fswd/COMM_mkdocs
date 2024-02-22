@@ -1,1 +1,4 @@
 site_name: COMM_instruction
+
+theme:
+  name: material
