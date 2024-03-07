@@ -40,19 +40,19 @@ If you liked the extensions above, and try to apply it to your workplace, then t
 
 1. Start by creating an HTML file. Type an exclamation mark (!) and press Tab (Tab ↹) to automatically generate basic HTML code in your file. Then, write "Hello World" under the _&lt;body&gt;_ tag.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    Hello World!
-  </body>
-</html>
-```
+   ```html
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+   </head>
+   <body>
+      Hello World!
+   </body>
+   </html>
+   ```
 
 2. Next, click the "Go Live" button at the bottom of the VSCode.![Go Live button](/Assets/images/go_live_button.png)
 
@@ -62,10 +62,10 @@ If you liked the extensions above, and try to apply it to your workplace, then t
 
 1. Before installing the **Error Lens** extension, create a CSS file with the following code, which intentionally contains an error.
 
-```css
-h1 {
-}
-```
+   ```css
+   h1 {
+   }
+   ```
 
 This code is intentionally empty and should trigger an error, but it might not show any error indication until you hover over the code.
 ![Before_install_error_lens](/Assets/images/before_error_lens.png)
