@@ -41,19 +41,22 @@ Click the Next button.
 7.  Installation is complete. Please click the Finish button.
 ![installatoin_window](../assets/images/jin_node_installation78png)
 
-// Action first 
-// seperate line
-
 ### macOS
 
-1. Node.js 공식 웹사이트에서 macOS 인스톨러를 다운로드합니다.
-2. 다운로드한 파일을 열고, 화면의 지시에 따라 설치합니다.
+1. Go to the [Node.js official website](https://nodejs.org/en) and click the latest version of node.js called LTS.
+![download node.js for mac](/Assets/images/nodejs_install_mac.png)
 
-### Linux
+2. open the installer, you downloaded.
+![installer node.js for mac](/Assets/images/nodejs_package_mac.png)
 
-Linux 사용자는 패키지 매니저를 통해 Node.js를 설치할 수 있습니다. 예를 들어, Ubuntu에서는 다음 명령어를 사용합니다.
+3. You will see the installer(.pkg) opened and the installer should be liek the following, image. Keep click **Continue** to download it.
+![installing node.js for mac](/Assets/images/nodejs_keep_install_mac.png)
 
-```bash
-sudo apt update
-sudo apt install nodejs
-sudo apt install npm
+4. You will be encountered the agreement like the following picture. Click **Agree**
+![nodejs_agree_mac](/Assets/images/nodejs_agree_mac.png)
+
+5. Finally, you will see the install button. Click the **Install** to install it.
+![nodejs_pkg_install_mac](/Assets/images/nodejs_pkg_install_mac.png)
+
+6. After finishing installation, it will says "The installation was completed successfully. If so, click **Close** to finish your installation!
+![nodejs_installed_mac](/Assets/images/nodejs_installed_mac.png)
