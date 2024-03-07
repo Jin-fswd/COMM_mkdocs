@@ -2,7 +2,7 @@
 
 ## Introduction to npm
 
-To complete this section, make sure you have ![installed Node.js](docs/node.md).
+To complete this section, make sure you have ![installed Node.js](/node.md).
 
 ## Install Node.js
 
