@@ -40,7 +40,7 @@ If you liked the extensions above, and try to apply it to your workplace, then t
 
 1. Start by creating an HTML file. Type an exclamation mark (!) and press Tab (Tab ↹) to automatically generate basic HTML code in your file. Then, write "Hello World" under the `<body>` tag.
 
-   ```html
+   ```HTML
    <!DOCTYPE html>
    <html lang="en">
    <head>
@@ -62,8 +62,8 @@ If you liked the extensions above, and try to apply it to your workplace, then t
 
 1. Before installing the **Error Lens** extension, create a CSS file with the following code, which intentionally contains an error.
 
-   ```css
-   h1 {
+   ```CSS
+   h1 { 
    }
    ```
 
