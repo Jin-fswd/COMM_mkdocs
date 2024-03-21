@@ -75,20 +75,22 @@ This code is intentionally empty and should trigger an error, but it might not s
 
 ## Using Prettier Extension
 
-1. After installing the Prettier extension, you may not immediately notice any differences. To enable its effects, you'll need to adjust some settings. Navigate to the bottom left corner and click on the gear icon; then, select "Settings." ![gear button](./Assets/images/cogwheel_settings.png)
+- After installing the Prettier extension, you may not immediately notice any differences. To enable its effects, you'll need to adjust some settings. Navigate to the bottom left corner and click on the gear icon; then, select "Settings." ![gear button](./Assets/images/cogwheel_settings.png)
 
-2. In the Settings, use the search bar at the top and type "default formatter." You should find an option named "Default Formatter".
+- In the Settings, use the search bar at the top and type "default formatter." You should find an option named "Default Formatter".
    ![default formatter](./Assets/images/default_formatter_option.png)
 
-3. Return to the Settings, click on "Text Editor," and then select "Formatting" on the left side. Within the Formatting section, check the checkbox next to the "Format On Save" option. This ensures that Prettier automatically cleans and beautifies your code when you save it.
+- Return to the Settings, click on "Text Editor," and then select "Formatting" on the left side. Within the Formatting section, check the checkbox next to the "Format On Save" option. This ensures that Prettier automatically cleans and beautifies your code when you save it.
    ![format on save option](./Assets/images/format_on_save_option.png)
 
-4. Now, let's test if it works. Create a JavaScript file and input the following code:
-   ```javascript
-   const        test          =         1234
+- Now, let's test if it works. Create a JavaScript file and input the following code:
 
-   const hello=         console.log('    hello: ',      test)
-   ```
+```js
+const        test          =         1234;
+
+const hello=         console.log('    hello: ',      test);
+```
+
 Although this code may initially seem unclear and unreadable, save the file (⌘S / CTRL + S), and you will observe that the Prettier extension significantly enhances the clarity of your code.
 ![before and after prettier extension](./Assets/images/prettier_extension.gif)
 
