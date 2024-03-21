@@ -1,4 +1,20 @@
-site_name: COMM_instruction
+site_name: How to start fullstack
 
 theme:
   name: material
+  language: en
+  palette:
+    primary: 'cyan'
+    accent: 'deep orange'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  logo: '../assets/images/logo.png'
+  favicon: 'assets/images/favicon.ico'
+
+nav:
+  - Home: index.md
+  - Node.js Introduction: node.md
+  - NPM Guide: npm.md
+  - Extensions: Extension.md
+  - Glossary: glossary.md
