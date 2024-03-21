@@ -91,3 +91,52 @@ const hello=         console.log('    hello: ',      test)
 ```
 Although this code may initially seem unclear and unreadable, save the file (⌘S / CTRL + S), and you will observe that the Prettier extension significantly enhances the clarity of your code.
 ![before and after prettier extension](./Assets/images/prettier_extension.gif)
+
+# Troubleshooting Guide: Enhancing Your VSCode Experience with Three Must-Have Extensions
+
+## Introduction
+
+This troubleshooting guide provides solutions to common issues that users may encounter while installing and using three must-have extensions in Visual Studio Code (VSCode): Live Server, Error Lens, and Prettier.
+
+### Common Installation Issues and Solutions
+
+1. **Extension Download Failure**
+   - **Issue:** Unable to download extensions from the VSCode Marketplace.
+   - **Solution:** Ensure that your internet connection is stable and that you have access to the VSCode Marketplace. If the issue persists, try downloading the extensions from a different network or using a different browser.
+
+2. **Installation Error**
+   - **Issue:** Error encountered while installing extensions in VSCode.
+   - **Solution:** Verify that you have the necessary permissions to install extensions and that your VSCode installation is up to date. Restart VSCode and try reinstalling the extensions. If errors persist, consult the official documentation or community forums for troubleshooting assistance.
+
+3. **Extension Compatibility**
+   - **Issue:** Extensions not compatible with your VSCode version or operating system.
+   - **Solution:** Check the compatibility requirements of each extension before installation. Ensure that you're using a supported VSCode version and that your operating system meets the minimum requirements specified by the extensions.
+
+### Usage Issues and Solutions
+
+1. **Extension Activation Error**
+   - **Issue:** Extensions fail to activate or function properly in VSCode.
+   - **Solution:** Check the VSCode output console for any error messages related to extension activation. Verify that the extensions are enabled in the Extensions view (CTRL+SHIFT+X / ⇧⌘X). If necessary, disable conflicting extensions or reinstall the problematic extensions.
+
+2. **Functionality Limitations**
+   - **Issue:** Certain features of the extensions are not working as expected.
+   - **Solution:** Review the extension documentation and settings to ensure that you're using the features correctly. Check for any known issues or limitations documented by the extension developers. If the issue persists, consider reporting it to the extension developers or seeking help from the VSCode community.
+
+3. **Performance Issues**
+   - **Issue:** VSCode performance is affected after installing and using extensions.
+   - **Solution:** Monitor the resource usage of VSCode and individual extensions using the Task Manager or Activity Monitor. Disable unnecessary extensions or adjust their settings to optimize performance. Consider upgrading your hardware or adjusting VSCode settings to improve performance.
+
+4. **Conflict Resolution**
+   - **Issue:** Conflicts between extensions or with other VSCode features.
+   - **Solution:** Disable conflicting extensions one by one to identify the source of the conflict. Experiment with different extension configurations and settings to resolve conflicts. If necessary, consult the extension documentation or seek advice from experienced users.
+
+5. **Update Management**
+   - **Issue:** Difficulty managing updates for extensions.
+   - **Solution:** Enable automatic updates for extensions in the VSCode settings to ensure that you receive the latest features and bug fixes. Regularly check for updates manually by visiting the Extensions view and clicking the "Update All" button if available. Review release notes and changelogs to understand the changes introduced by updates.
+
+6. **Extension Removal**
+   - **Issue:** Difficulty removing or uninstalling extensions from VSCode.
+   - **Solution:** Use the Extensions view (CTRL+SHIFT+X / ⇧⌘X) to manage installed extensions. Click on the gear icon next to each extension to access options for disabling, uninstalling, or configuring the extension. Follow the prompts to complete the removal process.
+
+7. **General Troubleshooting**
+   - If none of the above solutions resolve your issue, consider seeking help from official support channels, community forums, or consulting the official documentation for VSCode and the specific extensions.
