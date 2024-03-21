@@ -54,9 +54,9 @@ If you liked the extensions above, and try to apply it to your workplace, then t
    </html>
    ```
 
-2. Next, click the "Go Live" button at the bottom of the VSCode.![Go Live button](/Assets/images/go_live_button.png)
+2. Next, click the "Go Live" button at the bottom of the VSCode.![Go Live button](./Assets/images/go_live_button.png)
 
-3. Your web browser will open automatically, displaying the "Hello World" content from your HTML file. Any code changes you make will be applied to the browser in real-time. ![Web browser](/Assets/images/web_browser.png)
+3. Your web browser will open automatically, displaying the "Hello World" content from your HTML file. Any code changes you make will be applied to the browser in real-time. ![Web browser](./Assets/images/web_browser.png)
 
 ## Using Error Lens Extension
 

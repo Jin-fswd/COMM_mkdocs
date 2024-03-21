@@ -16,5 +16,6 @@ nav:
   - Node.js Introduction: node.md
   - NPM Guide: npm.md
   - Extensions: Extension.md
+  - Git: git.md
   - Glossary: glossary.md
-  - git: git.md
+  
