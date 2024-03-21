@@ -2,3 +2,18 @@ site_name: Basic Setup Guide for new FSWD Students using Visual Studio Code
 
 theme:
   name: material
+  language: en
+  palette:
+    primary: 'cyan'
+    accent: 'deep orange'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
+  logo: 'Assets/images/logo.png'
+
+nav:
+  - Home: index.md
+  - Node.js Introduction: node.md
+  - NPM Guide: npm.md
+  - Extensions: Extension.md
+  - Glossary: glossary.md
