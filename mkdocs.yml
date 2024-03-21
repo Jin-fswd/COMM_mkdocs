@@ -9,7 +9,7 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
-  logo: 'assets/images/logo.png'
+  logo: 'Assets/images/logo.png'
 
 nav:
   - Home: index.md
