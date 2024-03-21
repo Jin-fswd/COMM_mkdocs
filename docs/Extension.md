@@ -38,7 +38,7 @@ If you liked the extensions above, and try to apply it to your workplace, then t
 
 ## Using Live Server Extension
 
-1. Start by creating an HTML file. Type an exclamation mark (!) and press Tab (Tab ↹) to automatically generate basic HTML code in your file. Then, write "Hello World" under the _&lt;body&gt;_ tag.
+1. Start by creating an HTML file. Type an exclamation mark (!) and press Tab (Tab ↹) to automatically generate basic HTML code in your file. Then, write "Hello World" under the `<body>` tag.
 
    ```html
    <!DOCTYPE html>
@@ -84,10 +84,10 @@ This code is intentionally empty and should trigger an error, but it might not s
    ![format on save option](./Assets/images/format_on_save_option.png)
 
 4. Now, let's test if it works. Create a JavaScript file and input the following code:
-```js
-const        test          =         1234
+   ```js
+   const        test          =         1234
 
-const hello=         console.log('    hello: ',      test)
-```
+   const hello=         console.log('    hello: ',      test)
+   ```
 Although this code may initially seem unclear and unreadable, save the file (⌘S / CTRL + S), and you will observe that the Prettier extension significantly enhances the clarity of your code.
 ![before and after prettier extension](./Assets/images/prettier_extension.gif)
