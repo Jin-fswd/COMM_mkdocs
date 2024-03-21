@@ -48,13 +48,11 @@ Encountering errors while running a Node.js application.
 ## Failure to Initialize Repository
 
 If unable to initialize a local Git repository in VSCode:
-
 - Double-check the current folder or workspace.
 - Follow the documentation steps accurately.
 
 ## Connection Issues
 
 If facing difficulties connecting local repository to a remote one:
-
 - Verify the accuracy of the repository URL.
 - Check for any typos in the `git remote add origin <repository URL>` command.
