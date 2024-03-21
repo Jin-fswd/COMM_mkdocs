@@ -1,0 +1,700 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Extension/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>Node.js Introduction - Basic Setup Guide for new FSWD Students using Visual Studio Code</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.10ba22f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#nodejs-user-guide" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Basic Setup Guide for new FSWD Students using Visual Studio Code" class="md-header__button md-logo" aria-label="Basic Setup Guide for new FSWD Students using Visual Studio Code" data-md-component="logo">
+      
+  <img src="../Assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basic Setup Guide for new FSWD Students using Visual Studio Code
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Node.js Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Basic Setup Guide for new FSWD Students using Visual Studio Code" class="md-nav__button md-logo" aria-label="Basic Setup Guide for new FSWD Students using Visual Studio Code" data-md-component="logo">
+      
+  <img src="../Assets/images/logo.png" alt="logo">
+
+    </a>
+    Basic Setup Guide for new FSWD Students using Visual Studio Code
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Node.js Introduction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Node.js Introduction
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What is Node.js?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What is Node.js?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chromes-v8-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chrome's V8 Engine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript Runtime
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-advantages-of-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Advantages of Node.js
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Extension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../npm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NPM Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Git with Visual Studio Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshoot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshoot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. What is Node.js?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What is Node.js?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#chromes-v8-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      Chrome's V8 Engine
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-runtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript Runtime
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-advantages-of-nodejs" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Advantages of Node.js
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="nodejs-user-guide">Node.js User Guide</h1>
+<h2 id="1-what-is-nodejs">1. What is Node.js?</h2>
+<p>Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. It enables running JavaScript outside web browsers, primarily for server-side development.</p>
+<h3 id="chromes-v8-engine">Chrome's V8 Engine</h3>
+<ul>
+<li>Originally, JavaScript was confined to web browser execution.</li>
+<li>Each web browser has its JavaScript engine, with Chrome's V8 engine being notable for its speed.</li>
+<li>Node.js extends the V8 engine's capabilities, allowing JavaScript execution in server environments.</li>
+</ul>
+<h3 id="javascript-runtime">JavaScript Runtime</h3>
+<ul>
+<li>The term 'runtime' denotes the environment in which a program executes.</li>
+<li>Node.js provides a standalone environment for JavaScript code execution, facilitating its use in back-end applications.</li>
+</ul>
+<h2 id="2-advantages-of-nodejs">2. Advantages of Node.js</h2>
+<ol>
+<li><strong>Language Unification</strong>: Utilizing a single language for both client-side and server-side streamlines learning and enhances productivity.</li>
+<li><strong>Community</strong>: Node.js boasts a robust and supportive developer community, offering a wealth of resources and support.</li>
+<li><strong>Module Ecosystem</strong>: The npm (Node Package Manager) houses a vast array of third-party modules, aiding in rapid development and deployment.</li>
+</ol>
+<h2 id="3-conclusion">3. Conclusion</h2>
+<p>Node.js harnesses the efficient V8 engine and a rich module ecosystem, providing a versatile environment for full-stack JavaScript development. Its integrated approach facilitates a streamlined and productive development experience.</p>
+<h1 id="nodejs-installation-guide">Node.js Installation Guide</h1>
+<h2 id="installing-nodejs-on-windows">Installing Node.js on Windows</h2>
+<ol>
+<li>
+<p>Navigate to the <a href="https://nodejs.org/en">Node.js official website</a> and download the installer for Windows.</p>
+<p><img alt="Node.js Windows Installation Step 1" src="../Assets/images/jin_node_installation1.png" /></p>
+</li>
+<li>
+<p>Run the downloaded installer. When the installation wizard opens, click 'Next'.</p>
+<p><img alt="Node.js Windows Installation Step 2" src="../Assets/images/jin_node_installation2.png" /></p>
+</li>
+<li>
+<p>Accept the license agreement and click 'Next'.</p>
+<p><img alt="Node.js Windows Installation Step 3" src="../Assets/images/jin_node_installation3.png" /></p>
+</li>
+<li>
+<p>Choose the installation directory (default is C:\Program Files\nodejs) and click 'Next'.</p>
+<p><img alt="Node.js Windows Installation Step 4" src="../Assets/images/jin_node_installation4.png" /></p>
+</li>
+<li>
+<p>Select the components you wish to install. It is typically recommended to leave these at their default settings. Click 'Next' to continue.</p>
+<p><img alt="Node.js Windows Installation Step 5" src="../Assets/images/jin_node_installation5.png" /></p>
+</li>
+<li>
+<p>Review your selections and click 'Install' to proceed with the installation.</p>
+<p><img alt="Node.js Windows Installation Step 6" src="../Assets/images/jin_node_installation6.png" /></p>
+</li>
+<li>
+<p>Once the installation is complete, click 'Finish' to close the installer.</p>
+<p><img alt="Node.js Windows Installation Step 7" src="../Assets/images/jin_node_installation7.png" /></p>
+</li>
+</ol>
+<h2 id="installing-nodejs-on-macos">Installing Node.js on macOS</h2>
+<ol>
+<li>
+<p>Visit the <a href="https://nodejs.org/en">Node.js official website</a> and download the macOS installer.</p>
+<p><img alt="Node.js macOS Download" src="../Assets/images/nodejs_install_mac.png" /></p>
+</li>
+<li>
+<p>Open the downloaded .pkg file to start the installation process.</p>
+<p><img alt="Node.js macOS Installer" src="../Assets/images/nodejs_package_mac.png" /></p>
+</li>
+<li>
+<p>Follow the installation steps in the wizard, clicking 'Continue' to proceed through each step.</p>
+<p><img alt="Node.js macOS Installing" src="../Assets/images/nodejs_keep_install_mac.png" /></p>
+</li>
+<li>
+<p>Agree to the software license agreement to continue with the installation.</p>
+<p><img alt="Node.js macOS License Agreement" src="../Assets/images/nodejs_agree_mac.png" /></p>
+</li>
+<li>
+<p>Click 'Install' to begin the installation process. You may need to provide your administrator password.</p>
+</li>
+</ol>
+<p>After completing these steps, Node.js will be installed on your system. You can verify the installation by opening a terminal or command prompt and typing <code>node -v</code>, which should display the current version of Node.js installed on your system.</p>
+<h2 id="verifying-nodejs-installation">Verifying Node.js Installation</h2>
+<p>Follow the steps below to verify that Node.js has been properly installed.</p>
+<h3 id="verifying-nodejs-installation-on-windows">Verifying Node.js Installation on Windows</h3>
+<ol>
+<li>Type 'cmd' or 'Terminal' in the search bar on the taskbar and press [Enter] to open the Command Prompt.</li>
+<li>In the Command Prompt window, type <code>node</code> and press [Enter].</li>
+<li>If the installed version of Node.js appears and the cursor changes to <code>&gt;</code>, it indicates that Node.js is successfully installed.</li>
+<li>You can now execute JavaScript code. For example, typing <code>console.log(1 + 2)</code> and pressing [Enter] should output 3.</li>
+<li>To exit the Node.js environment, press [Ctrl+C] twice, then close the Command Prompt window.</li>
+</ol>
+<h3 id="verifying-nodejs-installation-on-macos">Verifying Node.js Installation on macOS</h3>
+<ol>
+<li>Click on the 'Terminal' icon in the Dock or Launchpad to open the Terminal app.</li>
+<li>In the Terminal window, type <code>node</code> and press [Enter].</li>
+<li>If Node.js version information is displayed and the cursor changes to <code>&gt;</code>, Node.js is installed correctly.</li>
+<li>Test executing JavaScript code, such as <code>console.log(1 + 2)</code>. If it outputs 3, your setup is correct.</li>
+<li>To exit the Node.js environment, press [Ctrl+C] twice and close the Terminal.</li>
+</ol>
+<p>By following these steps, you can confirm whether Node.js has been successfully installed on your system. Once verified, you can execute various JavaScript codes in the Node.js environment.</p>
+<h1 id="writing-and-running-a-simple-nodejs-code">Writing and Running a Simple Node.js Code</h1>
+<p>After installing Node.js and setting up the development environment in Visual Studio Code (VS Code), you're ready to write and execute some simple Node.js code. Unlike front-end development, where you link JavaScript files to HTML documents or insert code directly into HTML and view the output in a web browser, with Node.js, you can execute the code directly and see the results immediately.</p>
+<h2 id="executing-a-simple-nodejs-code">Executing a Simple Node.js Code</h2>
+<ol>
+<li><strong>Opening VS Code and Editing a JavaScript File</strong></li>
+</ol>
+<p>Launch VS Code and open the <code>hello.js</code> file located in the <code>01</code> folder. Initially, this file will be empty. Enter the following code and save the file:</p>
+<pre><code class="language-javascript">const hello = (name) =&gt; {
+console.log(&quot;Hello, &quot; + name);
+};
+
+hello(&quot;Jane&quot;);
+</code></pre>
+<p>Here, we declare a function named hello that takes a name parameter and prints a greeting to the console. We then call this hello function with "Jane" as the argument.</p>
+<ol>
+<li>Opening the Terminal</li>
+</ol>
+<p>To open the terminal window within VS Code, use the [Ctrl + Shift + ` ] shortcut (for Mac users, it's [Command + Shift + ` ]).</p>
+<p>The terminal displays the current working folder path. To execute a JavaScript file in Node.js, you need to be in the directory containing the file. To run the hello.js file in the 01 folder, you must navigate to this folder first. Type the following command in the terminal to change directories:</p>
+<ol>
+<li>Executing JavaScript with Node.js</li>
+</ol>
+<p>In Node.js, you execute a JavaScript file using the node command followed by the filename. You can omit the .js extension, as most developers do:</p>
+<pre><code class="language-bash">node hello
+</code></pre>
+<p>This command executes the hello function within the hello.js file, and the result is displayed in the terminal.</p>
+<ol>
+<li>Verifying the Execution Result</li>
+</ol>
+<p>The output of the hello function execution is displayed in the terminal. In this example, you would see:</p>
+<pre><code>hello, Jane
+</code></pre>
+<p>Using Node.js allows you to run JavaScript code outside a web browser and view the results immediately in your development environment.</p>
+<h1 id="congratulations">Congratulations!</h1>
+<p>You have now installed Node.js and learned how to write and run a basic Node.js program. With this knowledge, you can lay the foundation for server-side development using Node.js.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>

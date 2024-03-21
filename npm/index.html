@@ -1,0 +1,592 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Extension/">
+      
+      
+        <link rel="next" href="../git/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>NPM Guide - Basic Setup Guide for new FSWD Students using Visual Studio Code</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.10ba22f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#a-guide-to-setting-up-nodejs-projects-with-npm" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Basic Setup Guide for new FSWD Students using Visual Studio Code" class="md-header__button md-logo" aria-label="Basic Setup Guide for new FSWD Students using Visual Studio Code" data-md-component="logo">
+      
+  <img src="../Assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basic Setup Guide for new FSWD Students using Visual Studio Code
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              NPM Guide
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Basic Setup Guide for new FSWD Students using Visual Studio Code" class="md-nav__button md-logo" aria-label="Basic Setup Guide for new FSWD Students using Visual Studio Code" data-md-component="logo">
+      
+  <img src="../Assets/images/logo.png" alt="logo">
+
+    </a>
+    Basic Setup Guide for new FSWD Students using Visual Studio Code
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node.js Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Extension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    NPM Guide
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    NPM Guide
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to npm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Git with Visual Studio Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshoot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshoot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction-to-npm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction to npm
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="a-guide-to-setting-up-nodejs-projects-with-npm">A Guide to Setting Up Node.js Projects with npm</h1>
+<h2 id="introduction-to-npm">Introduction to npm</h2>
+<p>Setting up Node.js projects with npm (Node Package Manager) in Visual Studio Code (VSC) is a fundamental process for many developers. Below is a comprehensive step-by-step guide to help you set up your Node.js project in VSC using npm:</p>
+<h2 id="prerequisites">Prerequisites:</h2>
+<p>Make sure you have Visual Studio Code and Node.js installed on your system. You can download and install them by following these guides: <a href="https://jin-fswd.github.io/COMM_mkdocs/">Install Visual Studio Code</a> and <a href="https://jin-fswd.github.io/COMM_mkdocs/node/">Install Node.js</a>.</p>
+<h2 id="steps">Steps:</h2>
+<ul>
+<li><strong>Create a New Folder for Your Project:</strong>
+Open Visual Studio Code and create a new folder where you want to set up your Node.js project. You can do this by navigating to 
+<code>File &gt; Open Folder...</code> and then selecting or creating a new folder.</li>
+</ul>
+<p><img alt="npm localhost" src="../Assets/images/npm-open_folder.png" /></p>
+<ul>
+<li><strong>Open Terminal in Visual Studio Code:</strong>
+Once you have your project folder open in Visual Studio Code, you need to open an integrated terminal. You can do this by navigating to <code>View &gt; Terminal</code>.</li>
+</ul>
+<p><img alt="npm localhost" src="../Assets/images/npm-open_terminal.png" /></p>
+<ul>
+<li><strong>Change Project Directory:</strong>
+In the terminal, navigate to your project directory if you're not already there, using the cd command: </li>
+</ul>
+<pre><code class="language-bash">cd path/to/your/project
+</code></pre>
+<ul>
+<li><strong>Initialize Your Project with npm:</strong>
+Now, initialize your project with npm by running the following command in the Terminal (This command will create a <code>package.json</code> file with default values in your project directory):</li>
+</ul>
+<pre><code class="language-bash">npm init -y
+</code></pre>
+<ul>
+<li><strong>Install Dependencies:</strong>
+You can start installing dependencies for your project using npm. For example, let's install Express.js, a popular Node.js framework. Type the following command in the Terminal:</li>
+</ul>
+<pre><code class="language-bash">npm install express
+</code></pre>
+<ul>
+<li><strong>Install Dependencies (Multiple):</strong>
+To install multiple dependencies for your project using npm, you can list them all in a single command. For example, let's install Express.js and Body-parser, both popular Node.js packages. Type the following command in the Terminal:</li>
+</ul>
+<pre><code class="language-bash">npm install express body-parser
+</code></pre>
+<ul>
+<li><strong>Create Your Node.js Application:</strong>
+Now, you can start writing your Node.js application code. Create a new JavaScript file (e.g., app.js) in your project directory and start writing your Node.js code. Let's look at a very simple code:</li>
+</ul>
+<pre><code class="language-javascript">// app.js
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) =&gt; {
+  res.send('Hello, World!');
+});
+
+app.listen(3000, () =&gt; {
+  console.log('Server is running on http://localhost:3000');
+});
+</code></pre>
+<ul>
+<li><strong>Run Your Node.js Application:</strong>
+To run your Node.js application, you can use the integrated terminal in Visual Studio Code. Make sure you're in your project directory, and then type the following command in the Terminal:</li>
+</ul>
+<pre><code class="language-bash">node app.js
+</code></pre>
+<ul>
+<li><strong>View in Web Browser:</strong>
+Now that the Node.js server is live, you can access it by visiting <code>http://localhost:3000</code> in your web browser. Simply copy and paste the URL into the address bar at the top of the browser. </li>
+</ul>
+<p><img alt="npm localhost" src="../Assets/images/npm-localhost.png" /></p>
+<ul>
+<li>Congratulations! You have successfully set up a Node.js project using npm in Visual Studio Code. </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>

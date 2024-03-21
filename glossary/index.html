@@ -1,0 +1,566 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../troubleshoot/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.14">
+    
+    
+      
+        <title>Glossary - Basic Setup Guide for new FSWD Students using Visual Studio Code</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.10ba22f1.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#glossary" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Basic Setup Guide for new FSWD Students using Visual Studio Code" class="md-header__button md-logo" aria-label="Basic Setup Guide for new FSWD Students using Visual Studio Code" data-md-component="logo">
+      
+  <img src="../Assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Basic Setup Guide for new FSWD Students using Visual Studio Code
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Glossary
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Basic Setup Guide for new FSWD Students using Visual Studio Code" class="md-nav__button md-logo" aria-label="Basic Setup Guide for new FSWD Students using Visual Studio Code" data-md-component="logo">
+      
+  <img src="../Assets/images/logo.png" alt="logo">
+
+    </a>
+    Basic Setup Guide for new FSWD Students using Visual Studio Code
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node.js Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Extension/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Extensions
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../npm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NPM Guide
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Git with Visual Studio Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshoot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Troubleshoot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Glossary
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="glossary">Glossary</h1>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Address Bar</td>
+<td>A graphical UI element in a web browser that displays the current URL of the webpage being viewed and allows users to input or edit URLs to navigate to different web pages.</td>
+</tr>
+<tr>
+<td>Asynchronous</td>
+<td>Execution that occurs without waiting for other tasks to complete, allowing for non-blocking operations.</td>
+</tr>
+<tr>
+<td>Body-parser</td>
+<td>A middleware for Express.js (and other Node.js web frameworks) that parses incoming request bodies from client applications, allowing developers to access form data, JSON payloads, and other request body content in their server-side code easily.</td>
+</tr>
+<tr>
+<td>Branch</td>
+<td>A lightweight movable pointer to a commit in Git, representing an independent line of development and allowing developers to work on features or fixes without affecting the main codebase.</td>
+</tr>
+<tr>
+<td>Command</td>
+<td>A specific instruction given to the computer through the terminal to perform a particular action or task.</td>
+</tr>
+<tr>
+<td>Commit</td>
+<td>The act of saving changes to the local repository in Git, recording a snapshot of the project's state at a particular point in time along with a commit message describing the changes made.</td>
+</tr>
+<tr>
+<td>Corepack manager</td>
+<td>A tool that manages core package managers for JavaScript.</td>
+</tr>
+<tr>
+<td>CSS</td>
+<td>Cascading Style Sheets (CSS) is a style sheet language used for specifying the presentation and styling of a document written in a markup language such as HTML</td>
+</tr>
+<tr>
+<td>Directory</td>
+<td>A location in a file system where files can be stored. Also referred to as a folder.</td>
+</tr>
+<tr>
+<td>Error Lens</td>
+<td>Displays error, warning, and diagnostic messages on code lines, helping quickly identify areas that need modification.</td>
+</tr>
+<tr>
+<td>Event-Driven</td>
+<td>A programming paradigm in which the flow of the program is determined by events such as user actions, sensor outputs, or message passing.</td>
+</tr>
+<tr>
+<td>Express</td>
+<td>A minimal and flexible web application framework for Node.js, designed to simplify the process of building web applications and APIs by providing a robust set of features for routing, middleware, and HTTP request handling.</td>
+</tr>
+<tr>
+<td>Extension</td>
+<td>An add-on for Visual Studio Code that enhances its functionality, allowing users to add languages, debuggers, tools, and integrations to support their development workflow.</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>A pre-built, reusable software structure or platform that provides a foundation for developing applications, often including libraries, tools, and predefined patterns to streamline development tasks and maintain consistency.</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>A distributed version control system for tracking changes in source code during software development.</td>
+</tr>
+<tr>
+<td>HTML</td>
+<td>HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser.</td>
+</tr>
+<tr>
+<td>Installer</td>
+<td>A software utility that installs other software onto a computer system.</td>
+</tr>
+<tr>
+<td>JavaScript runtime</td>
+<td>An environment that interprets JavaScript code and executes it.</td>
+</tr>
+<tr>
+<td>Live Server</td>
+<td>An extension for VSCode that allows real-time preview of HTML code changes in a web browser as you write them.</td>
+</tr>
+<tr>
+<td>LTS</td>
+<td>Long-Term Support, a term often used to describe a version of software that will be supported for a longer period than usual.</td>
+</tr>
+<tr>
+<td>Network Application</td>
+<td>Software that communicates over a network to provide or receive services.</td>
+</tr>
+<tr>
+<td>Node.js</td>
+<td>An asynchronous event-driven JavaScript runtime, used for developing scalable network applications.</td>
+</tr>
+<tr>
+<td>NPM</td>
+<td>Node Package Manager, a tool for managing JavaScript packages.</td>
+</tr>
+<tr>
+<td>PATH</td>
+<td>An environment variable that specifies a set of directories where executable programs are located.</td>
+</tr>
+<tr>
+<td>Prettier</td>
+<td>A code formatter that automatically cleans up code to enhance readability.</td>
+</tr>
+<tr>
+<td>Pull Request</td>
+<td>A feature of Git-based repository hosting services (e.g., GitHub, GitLab) that facilitates proposing changes to a project maintained by another user or organization, enabling code review and collaboration among team members.</td>
+</tr>
+<tr>
+<td>Push</td>
+<td>The act of sending local commits from a Git repository to a remote repository, updating the remote repository with the changes made locally.</td>
+</tr>
+<tr>
+<td>Remote Repository</td>
+<td>A repository that is hosted on a server (e.g., GitHub, GitLab) rather than on your local computer, allowing multiple developers to collaborate on a project.</td>
+</tr>
+<tr>
+<td>Runtime environment</td>
+<td>An environment that provides runtime services to a program while it is running.</td>
+</tr>
+<tr>
+<td>Terminal</td>
+<td>A text-based interface used to interact with a computer system, allowing users to execute commands and perform various tasks.</td>
+</tr>
+<tr>
+<td>URL (Uniform Resource Locator)</td>
+<td>A reference or address used to locate resources on the internet, typically consisting of a protocol (such as "http" or "https"), domain name, and path to the specific resource.</td>
+</tr>
+<tr>
+<td>Visual Studio Code (VS Code)</td>
+<td>A free source-code editor made by Microsoft for Windows, Linux, and macOS, with support for debugging, embedded Git control, syntax highlighting, intelligent code completion, snippets, and code refactoring.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.bd41221c.min.js"></script>
+      
+    
+  </body>
+</html>
