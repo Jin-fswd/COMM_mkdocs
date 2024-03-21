@@ -38,39 +38,39 @@ If you liked the extensions above, and try to apply it to your workplace, then t
 
 ## Using Live Server Extension
 
-1. Start by creating an HTML file. Type an exclamation mark (!) and press Tab (Tab ↹) to automatically generate basic HTML code in your file. Then, write "Hello World" under the `<body>` tag.
+- Start by creating an HTML file. Type an exclamation mark (!) and press Tab (Tab ↹) to automatically generate basic HTML code in your file. Then, write "Hello World" under the `<body>` tag.
 
-   ```HTML
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-   </head>
-   <body>
-      Hello World!
-   </body>
-   </html>
-   ```
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>Document</title>
+</head>
+<body>
+   Hello World!
+</body>
+</html>
+```
 
-2. Next, click the "Go Live" button at the bottom of the VSCode.![Go Live button](./Assets/images/go_live_button.png)
+- Next, click the "Go Live" button at the bottom of the VSCode.![Go Live button](./Assets/images/go_live_button.png)
 
-3. Your web browser will open automatically, displaying the "Hello World" content from your HTML file. Any code changes you make will be applied to the browser in real-time. ![Web browser](./Assets/images/web_browser.png)
+- Your web browser will open automatically, displaying the "Hello World" content from your HTML file. Any code changes you make will be applied to the browser in real-time. ![Web browser](./Assets/images/Web_browser.png)
 
 ## Using Error Lens Extension
 
-1. Before installing the **Error Lens** extension, create a CSS file with the following code, which intentionally contains an error.
+- Before installing the **Error Lens** extension, create a CSS file with the following code, which intentionally contains an error.
 
-   ```CSS
-   h1 { 
-   }
-   ```
+```css
+h1 { 
+}
+```
 
 This code is intentionally empty and should trigger an error, but it might not show any error indication until you hover over the code.
 ![Before_install_error_lens](./Assets/images/before_error_lens.png)
 
-2. Install the **Error Lens** extension and observe the changes in your CSS file. Error Lens will provide more detailed error information, making it easier to identify and fix issues.
+- Install the **Error Lens** extension and observe the changes in your CSS file. Error Lens will provide more detailed error information, making it easier to identify and fix issues.
    ![After_install_error_lens](./Assets/images/after_error_lens.png)
 
 ## Using Prettier Extension
@@ -84,7 +84,7 @@ This code is intentionally empty and should trigger an error, but it might not s
    ![format on save option](./Assets/images/format_on_save_option.png)
 
 4. Now, let's test if it works. Create a JavaScript file and input the following code:
-   ```js
+   ```javascript
    const        test          =         1234
 
    const hello=         console.log('    hello: ',      test)
